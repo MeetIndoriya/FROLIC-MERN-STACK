@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frolic Celebrations : Where Ideas Turn Into Iconic Events.</title>
+    <!-- CDN LINKS BOOTSTRAP -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- CDN LINKS ICON [ LINEICONS SERVICE ] -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
+
+    <!-- ICON OF WEBSITE -->
+    <link rel="icon" href="src/favicon_Photoroom.png">
+
+    <!-- CASCADING STYLE SHEETS -->
+    <link rel="stylesheet" href="Login.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+</head>
+
+<body>
+    <!-- HEADER CONTENT-->
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg">
+            <div class="container-fluid d-flex align-items-center">
+
+                <div class="navbar-header d-flex align-items-center">
+                    <button type="button" class="navbar-toggle btn btn-bg" data-toggle="collapse"
+                        data-target="#myNavbar" id="menubtn">
+                        <img src="src/favicon_Photoroom.png" width="75px" height="50px">
+                    </button>
+                    <a class="navbar-brand text-white ms-2 md" href="Frolic.html" id="title">FROLIC
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-expeand-sm" id="myNavbar">
+                    <ul class="nav navbar-nav d-flex flex-row gap-3 ms-4 ">
+                        <li class="active"><a href="Frolic.html" class="text-primary nav-link"><i
+                                    class="bi bi-grid me-1"></i>
+                                Home</a></li>
+                        <li><a href="#events" id="navigate-event" class="text-success nav-link"><i
+                                    class="bi bi-calendar2 m-1"></i> Events</a></li>
+                        <li><a href="#" class="text-info nav-link"><i class="bi bi-file-earmark"></i> FAQ's</a></li>
+                        <li><a href="#contact" class="text-danger nav-link"><i class="bi bi-person-lines-fill"></i>
+                                Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER CONTENT END-->
+
+
+    <!-- MAIN CONTENT-->
+    <main>
+
+        <!-- ANIMATION ELEMENTS -->
+
+        <div class="bg-3d">
+            <div class="element" style="top:10%; left:5%; animation-delay:0s"></div>
+            <div class="element" style="top:40%; left:20%; animation-delay:1s"></div>
+            <div class="element" style="top:70%; left:60%; animation-delay:2s"></div>
+            <div class="element" style="top:20%; left:80%; animation-delay:3s"></div>
+            <div class="element" style="top:55%; left:35%; animation-delay:4s"></div>
+        </div>
+
+
+
+        <!-- LOGIN FORM CODE -->
+
+        <div class="container col-12 row display-flex flex-column align-items-center mt-5 text-white">
+            <div class="col-md-6 col-lg-4 sidebar border rounded p-5">
+                <form class="needs-validation" id="loginForm" novalidate>
+                    <h1 class="m-2 ps-4 d-flex justify-content-center" id="hero-main"> Login To Frolic </h1>
+
+
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="loginEmail" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" class="form-control" placeholder="Enter password"
+                            required minlength="6">
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Login
+                    </button>
+
+                    <!-- Register -->
+                    <div class="text-center mt-3">
+                        <span>Not registered?
+                            <a href="RegistrationForm.html">Create account</a>
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- FOOTER CONTENT-->
+
+    <section id="contact">
+        <footer class="p-4 bg mt-5">
+            <div class="copyright-wrapper d-block mb-1 fs-8 text-center text-white">
+                <span>&copy; 2026. All Rights Reserved</span>
+            </div>
+            <div class="credit-wrapper d-block text-secondary fs-8 text-center">
+                <span class="text-white"> Thanks For Visit Site </span>
+                <span class="text-primary">&#9829;</span>
+            </div>
+
+        </footer>
+    </section>
+    <!-- BOOTSTRAP JQUERY -->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            try {
+                const response = await fetch("http://localhost:5000/api/auth/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        emailAddress: email,
+                        userPassword: password
+                    })
+
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    alert(result.message || "Login failed");
+                    return;
+                }
+
+                // Save session
+                localStorage.setItem("loggedInUser", JSON.stringify(result.data));
+
+                // Role-based redirect
+                if (result.data.role === "Admin") {
+                    window.location.href = "AdminDashboard.html";
+                } else if (result.data.role === "Coordinator") {
+                    window.location.href = "CoordinatorDashboard.html";
+                } else {
+                    window.location.href = "Frolic.html";
+                }
+
+            } catch (error) {
+                alert("Server error. Please try again later.");
+                console.error(error);
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

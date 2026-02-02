@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Information Hub</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6b8cbc;
+            --accent-color: #ff7e5f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(74, 111, 165, 0.85), rgba(107, 140, 188, 0.9)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-category {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .category-conference {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .category-workshop {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .category-music {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .category-tech {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .event-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .featured-event {
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .btn-custom {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff6b47;
+            color: white;
+        }
+
+        .filter-btn {
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .event-card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-calendar-event me-2"></i>EventInfo Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Discover Amazing Events</h1>
+            <p class="lead mb-4">Find, explore, and register for the best conferences, workshops, concerts, and more in
+                your area</p>
+            <a href="#events" class="btn btn-light btn-lg px-4">Browse Events</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container" id="events">
+        <!-- Filter Buttons -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="mb-3">Filter by Category</h3>
+                <div class="d-flex flex-wrap">
+                    <button class="btn btn-outline-primary filter-btn active" data-filter="all">All Events</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="conference">Conferences</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="workshop">Workshops</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="music">Music & Concerts</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="tech">Tech Events</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="row" id="events-container">
+            <!-- Event cards will be dynamically filtered -->
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-5 bg-light mt-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">About EventInfo Hub</h2>
+                    <p class="lead">We connect people with the best events happening around them. From tech conferences
+                        to music festivals, workshops to networking events, we provide comprehensive information to help
+                        you make the most of your time.</p>
+                    <p>Our platform is updated daily with new events, ensuring you never miss out on exciting
+                        opportunities to learn, network, and have fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>EventInfo Hub</h5>
+                    <p>Your go-to source for event information and registration.</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Submit an Event</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 Event Street, City, Country</li>
+                        <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-envelope me-2"></i> info@eventinfohub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 EventInfo Hub. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Dummy event data
+        const events = [
+            {
+                id: 1,
+                title: "Tech Innovators Conference 2023",
+                category: "conference",
+                date: "October 15-17, 2023",
+                location: "Convention Center, San Francisco",
+                description: "Join the largest gathering of technology leaders, innovators, and entrepreneurs to discuss the future of tech.",
+                image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                featured: true
+            },
+            {
+                id: 2,
+                title: "Digital Marketing Workshop",
+                category: "workshop",
+                date: "November 5, 2023",
+                location: "Business Hub, New York",
+                description: "Learn the latest digital marketing strategies from industry experts in this hands-on workshop.",
+                image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: false
+            },
+            {
+                id: 3,
+                title: "Summer Music Festival",
+                category: "music",
+                date: "August 20-22, 2023",
+                location: "Central Park, New York",
+                description: "Three days of live music featuring top artists from various genres. Food trucks and activities included.",
+                image: "https://images.unsplash.com/photo-1501281667305-0d4eb5394f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: true
+            },
+            {
+                id: 4,
+                title: "AI & Machine Learning Summit",
+                category: "tech",
+                date: "September 12-14, 2023",
+                location: "Tech Campus, Austin",
+                description: "Explore the latest advancements in artificial intelligence and machine learning with leading researchers.",
+                image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: false
+            },
+            {
+                id: 5,
+                title: "Startup Pitch Competition",
+                category: "conference",
+                date: "December 3, 2023",
+                location: "Innovation Center, Boston",
+                description: "Watch emerging startups pitch their ideas to a panel of investors for a chance to win funding.",
+                image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: false
+            },
+            {
+                id: 6,
+                title: "Web Development Bootcamp",
+                category: "workshop",
+                date: "October 28-29, 2023",
+                location: "Digital Academy, Chicago",
+                description: "Intensive two-day workshop covering modern web development technologies and best practices.",
+                image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: false
+            },
+            {
+                id: 7,
+                title: "Jazz Night Live",
+                category: "music",
+                date: "November 18, 2023",
+                location: "Blue Note Club, Chicago",
+                description: "An evening of smooth jazz featuring renowned musicians from around the world.",
+                image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: false
+            },
+            {
+                id: 8,
+                title: "Cybersecurity Conference",
+                category: "tech",
+                date: "December 10-12, 2023",
+                location: "Security Center, Washington DC",
+                description: "Learn about the latest threats and defense strategies in cybersecurity from global experts.",
+                image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80",
+                featured: true
+            }
+        ];
+
+        // Function to render events
+        function renderEvents(filter = 'all') {
+            const container = document.getElementById('events-container');
+            container.innerHTML = '';
+
+            const filteredEvents = filter === 'all' ? events : events.filter(event => event.category === filter);
+
+            filteredEvents.forEach(event => {
+                const categoryClass = `category-${event.category}`;
+                const featuredClass = event.featured ? 'featured-event' : '';
+
+                const col = document.createElement('div');
+                col.className = 'col-md-6 col-lg-4 col-xl-3';
+
+                col.innerHTML = `
+                    <div class="card event-card ${featuredClass}">
+                        <img src="${event.image}" class="card-img-top" alt="${event.title}">
+                        <div class="card-body">
+                            <div class="event-category ${categoryClass}">${event.category.charAt(0).toUpperCase() + event.category.slice(1)}</div>
+                            <h5 class="card-title">${event.title}</h5>
+                            <p class="card-text">${event.description}</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <p class="event-date mb-1"><i class="bi bi-calendar-event me-1"></i> ${event.date}</p>
+                                    <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> ${event.location}</p>
+                                </div>
+                                <a href="#" class="btn btn-custom">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(col);
+            });
+        }
+
+        // Initialize with all events
+        document.addEventListener('DOMContentLoaded', function () {
+            renderEvents();
+
+            // Add filter functionality
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.remove('btn-primary');
+                        btn.classList.add('btn-outline-primary');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.classList.remove('btn-outline-primary');
+                    this.classList.add('btn-primary');
+
+                    // Filter events
+                    const filter = this.getAttribute('data-filter');
+                    renderEvents(filter);
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

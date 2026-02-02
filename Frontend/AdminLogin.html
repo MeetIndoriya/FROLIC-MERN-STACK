@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frolic Celebrations : Admin Login</title>
+
+    <!-- CDN LINKS BOOTSTRAP -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- CDN LINKS ICON [ LINEICONS SERVICE ] -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
+
+    <!-- CASCADING STYLE SHEETS -->
+    <link rel="stylesheet" href="AdminLogin.css">
+
+    <!-- ICON OF WEBSITE -->
+    <link rel="icon" href="src/favicon_Photoroom.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+</head>
+
+<body>
+
+    <!-- HEADER CONTENT-->
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg">
+            <div class="container-fluid d-flex align-items-center">
+
+                <div class="navbar-header d-flex align-items-center">
+                    <button type="button" class="navbar-toggle btn btn-bg" data-toggle="collapse"
+                        data-target="#myNavbar" id="menubtn">
+                        <img src="src/favicon_Photoroom.png" width="75px" height="50px">
+                    </button>
+                    <a class="navbar-brand text-white ms-2 md" href="Frolic.html" id="title">FROLIC
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-expeand-sm d-flex justify-content-center" id="myNavbar">
+                    <ul class="nav navbar-nav d-flex flex-row gap-3 ms-4 ">
+                        <li class="active"><a href="Frolic.html" class="text-white nav-link">Home</a></li>
+                        <li><a href="#" class="text-white nav-link">About Us</a></li>
+                        <li><a id="navigate-event" class="text-white nav-link">Events</a></li>
+                        <li><a href="#" class="text-white nav-link">FAQ's</a></li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle text-white  nav-link" data-toggle="dropdown" href="#" id="anchor">
+                                <i class="glyphicon glyphicon-log-in"></i> Login <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" id="dropdown"
+                                style="width: 180px; background-color: rgba(188, 188, 188,0.4);">
+                                <li class="ps-2 pe-2 m-1 "><a href="UserLogin.html" class="dropdown-item text-white"> <i
+                                            class="lni lni-user-4 btn"
+                                            style="background-color: rgb(255, 62, 62);"></i><span> User</span></a></li>
+                                <li class="ps-2 pe-2 m-2"><a href="AdminLogin.html" class="dropdown-item text-white"><i
+                                            class="lni lni-refresh-user-1 btn"
+                                            style="background-color: rgb(255, 0, 212);"></i><span>
+                                            Admin</span></a>
+                                </li>
+                                <li class="ps-2 pe-2 m-2 "><a href="DepartmentLogin.html"
+                                        class="dropdown-item text-white"><i class="lni lni-target-user btn"
+                                            style="background-color: rgb(255, 115, 0);"></i><span> Department</span></a>
+                                </li>
+                                <li class="ps-2 pe-2 m-2 "><a href="InstituteLogin.html"
+                                        class="dropdown-item text-white"><i class="lni lni-graduation-cap-1 btn"
+                                            style="background-color: rgb(255, 255, 0);" s></i><span>
+                                            Institute</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="text-white nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="search-box ms-auto me-3 md ">
+                    <form class="d-flex">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Event">
+                            <button class="btn btn-danger" type="submit">
+                                <i class="lni lni-search-1"></i>
+
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER CONTENT END-->
+
+    <div class="container col-12 row display-flex flex-column align-items-center mt-5 text-white">
+        <div class="col-md-6 col-lg-4 sidebar border rounded p-5">
+
+            <form>
+                <h1 class="m-2 ps-4" id="hero-main"> Admin </h1>
+                <div class="d-flex justify-content-center">
+                    <small class="m-2 text-white " id="hero"> Frolic Events</small>
+                </div>
+                <div class="form-group m-3">
+                    <label for="email">Username</label>
+                    <input type="email" class="form-control mt-2" id="email" aria-describedby="email"
+                        placeholder="Enter Your Username">
+                </div>
+                <div class="form-group m-3">
+                    <label for="psw">Password</label>
+                    <input type="password" class="form-control mt-2" id="psw" placeholder="Password">
+                    <small id="psw" class="form-text text-white"> Never Share Your Password</small>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="check">Check me out</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn" style="background-color: rgb(255, 0, 212);">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="bg-3d">
+            <div class="element" style="top:10%; left:5%; animation-delay:0s"></div>
+            <div class="element" style="top:40%; left:20%; animation-delay:1s"></div>
+            <div class="element" style="top:70%; left:60%; animation-delay:2s"></div>
+            <div class="element" style="top:20%; left:80%; animation-delay:3s"></div>
+            <div class="element" style="top:55%; left:35%; animation-delay:4s"></div>
+        </div>
+    </main>
+
+
+    <footer class="p-4 bg">
+        <div class="copyright-wrapper d-block mb-1 fs-8 text-center text-white">
+            <span>&copy; 2026. All Rights Reserved</span>
+        </div>
+        <div class="credit-wrapper d-block text-secondary fs-8 text-center">
+            <span class="text-white"> Thanks For Visit Site </span>
+            <span class="text-primary">&#9829;</span>
+        </div>
+
+    </footer>
+    <!-- FOOTER CONTENT END-->
+
+</body>
+
+</html>

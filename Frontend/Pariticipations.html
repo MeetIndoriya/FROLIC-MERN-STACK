@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frolic Celebrations : Where Ideas Turn Into Iconic Events.</title>
+    <!-- CDN LINKS BOOTSTRAP -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <!-- CDN LINKS ICON [ LINEICONS SERVICE ] -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
+
+    <!-- ICON OF WEBSITE -->
+    <link rel="icon" href="src/favicon_Photoroom.png">
+
+    <!-- CASCADING STYLE SHEETS -->
+    <link rel="stylesheet" href="Pariticipations.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg">
+        <div class="container-fluid d-flex align-items-center">
+
+            <div class="navbar-header d-flex align-items-center">
+                <button type="button" class="navbar-toggle btn btn-bg" data-toggle="collapse" data-target="#myNavbar"
+                    id="menubtn">
+                    <img src="src/favicon_Photoroom.png" width="75px" height="50px">
+                </button>
+                <a class="navbar-brand text-white ms-2 md" href="Frolic.html" id="title">FROLIC
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-expeand-sm" id="myNavbar">
+                <ul class="nav navbar-nav d-flex flex-row gap-3 ms-4 ">
+                    <li class="nav-item"><a href="#dashboard" class="text-primary nav-link active"><i
+                                class="bi bi-grid me-1"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#participants" id="navigate-event"
+                            class="text-success nav-link  active"><i class="bi bi-calendar2 m-1"></i>Participants</a>
+                    </li>
+                    <li class="nav-item"><a href="#payment" class="text-danger nav-link  active"><i
+                                class="bi bi-easel3 m-1"></i>Payment</a></li>
+                    <li class="nav-item"><a href="#results" class=" text-warning nav-link  active"><i
+                                class="bi bi-layout-wtf m-1"></i>Results</a></li>
+                </ul>
+            </div>
+
+
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary"><i class="bi bi-box-arrow-right"></i> Logout</button>
+            </div>
+            </form>
+        </div>
+
+        </div>
+    </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ANIMATION ELEMENTS -->
+
+        <div class="bg-3d">
+            <div class="element" style="top:10%; left:5%; animation-delay:0s"></div>
+            <div class="element" style="top:40%; left:20%; animation-delay:1s"></div>
+            <div class="element" style="top:70%; left:60%; animation-delay:2s"></div>
+            <div class="element" style="top:20%; left:80%; animation-delay:3s"></div>
+            <div class="element" style="top:55%; left:35%; animation-delay:4s"></div>
+        </div>
+
+
+        <!-- VERIFY A MEMBER OF EVENT-->
+        <div class="container col-md-6 mt-5">
+            <h2 class="mb-4 text-primary">Participation Form</h2>
+            <form id="participationForm" class="row g-3 needs-validation" novalidate>
+
+
+
+                <!-- Main Info -->
+                <div class="col-md-6">
+                    <label for="groupName" class="form-label text-danger fw-bold">Group Name</label>
+                    <input type="text" class="form-control" id="groupName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="participationCount" class="form-label text-danger fw-bold">Number of
+                        Participations</label>
+                    <select class="form-select" id="participationCount" required>
+                        <option value="">Select...</option>
+                        <option value="2">2 Participations</option>
+                        <option value="3">3 Participations</option>
+                        <option value="4">4 Participations</option>
+                    </select>
+                </div>
+
+                <!-- Dynamic Participation Fields -->
+                <div id="participationFields"></div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success btn-lg">Create Group</button>
+                </div>
+            </form>
+
+            <!-- Groups Display -->
+            <h3 class="mt-5 mb-3 text-secondary">Created Groups</h3>
+            <div id="groupsList" class="row"></div>
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER CONTENT-->
+
+    <footer class="p-4 bg ">
+        <div class="copyright-wrapper d-block mb-1 fs-8 text-center text-white">
+            <span>&copy; 2026. All Rights Reserved</span>
+        </div>
+        <div class="credit-wrapper d-block text-secondary fs-8 text-center">
+            <span class="text-white"> Thanks For Visit Site </span>
+            <span class="text-primary">&#9829;</span>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Active nav link highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section, [id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                if (section.offsetTop < scrollPos) {
+                    current = section.getAttribute('id') || '';
+                }
+            });
+
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const groups = {}; // Store all groups
+        const participationFieldsContainer = document.getElementById('participationFields');
+
+        // Dynamic field generation
+        document.getElementById('participationCount').addEventListener('change', function () {
+            const count = parseInt(this.value);
+            participationFieldsContainer.innerHTML = '';
+
+            if (count) {
+                for (let i = 1; i <= count; i++) {
+                    const fieldGroup = document.createElement('div');
+                    fieldGroup.className = 'row g-3 mb-4 p-3 border rounded bg-white';
+                    fieldGroup.innerHTML = `
+                        <h6 class="col-12 text-primary fw-bold">Participation ${i}</h6>
+                        <div class="col-md-4">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control participation-firstname" data-index="${i}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control participation-lastname" data-index="${i}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control participation-email" data-index="${i}" required>
+                        </div>
+                    `;
+                    participationFieldsContainer.appendChild(fieldGroup);
+                }
+            }
+        });
+
+        // Form submission
+        document.getElementById('participationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const groupName = document.getElementById('groupName').value;
+            if (!groupName) return alert('Please enter group name');
+
+            const participants = [];
+            const firstNames = document.querySelectorAll('.participation-firstname');
+            const lastNames = document.querySelectorAll('.participation-lastname');
+            const emails = document.querySelectorAll('.participation-email');
+
+            for (let i = 0; i < firstNames.length; i++) {
+                participants.push({
+                    firstName: firstNames[i].value,
+                    lastName: lastNames[i].value,
+                    email: emails[i].value
+                });
+            }
+
+            groups[groupName] = participants;
+            displayGroups();
+            this.reset();
+            participationFieldsContainer.innerHTML = '';
+        });
+
+        function displayGroups() {
+            const container = document.getElementById('groupsList');
+            container.innerHTML = '';
+
+            Object.keys(groups).forEach(groupName => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'col-lg-6 col-xl-4 mb-4';
+                groupDiv.innerHTML = `
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">${groupName}</h5>
+                            <small class="opacity-75">${groups[groupName].length} participants</small>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                ${groups[groupName].map(p =>
+                    `<li class="list-group-item px-3 py-2 border-0">
+                                        <strong>${p.firstName} ${p.lastName}</strong><br>
+                                        <small class="text-muted">${p.email}</small>
+                                    </li>`
+                ).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(groupDiv);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

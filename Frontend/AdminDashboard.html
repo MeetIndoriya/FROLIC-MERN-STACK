@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frolic Celebrations : Where Ideas Turn Into Iconic Events.</title>
+    <!-- CDN LINKS BOOTSTRAP -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <!-- CDN LINKS ICON [ LINEICONS SERVICE ] -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
+
+    <!-- ICON OF WEBSITE -->
+    <link rel="icon" href="src/favicon_Photoroom.png">
+
+    <!-- CASCADING STYLE SHEETS -->
+    <link rel="stylesheet" href="AdminDashboard.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg">
+            <div class="container-fluid d-flex align-items-center">
+
+                <div class="navbar-header d-flex align-items-center">
+                    <button type="button" class="navbar-toggle btn btn-bg" data-toggle="collapse"
+                        data-target="#myNavbar" id="menubtn">
+                        <img src="src/favicon_Photoroom.png" width="75px" height="50px">
+                    </button>
+                    <a class="navbar-brand text-white ms-2 md" href="Frolic.html" id="title">FROLIC
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-expeand-sm" id="myNavbar">
+                    <ul class="nav navbar-nav d-flex flex-row gap-3 ms-4 ">
+                        <li class="nav-item"><a href="#dashboard" class="text-primary nav-link active"><i
+                                    class="bi bi-grid me-1"></i> Dashboard</a></li>
+                        <li class="nav-item"><a href="#event" id="navigate-event"
+                                class="text-success nav-link  active"><i class="bi bi-calendar2 m-1"></i>Event</a></li>
+                        <li class="nav-item"><a href="#institute" class="text-danger nav-link  active"><i
+                                    class="bi bi-easel3 m-1"></i>Institute</a></li>
+                        <li class="nav-item"><a href="#department" class=" text-warning nav-link  active"><i
+                                    class="bi bi-layout-wtf m-1"></i>Department</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                </div>
+                </form>
+            </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <!-- ANIMATION ELEMENTS -->
+
+        <div class="bg-3d">
+            <div class="element" style="top:10%; left:5%; animation-delay:0s"></div>
+            <div class="element" style="top:40%; left:20%; animation-delay:1s"></div>
+            <div class="element" style="top:70%; left:60%; animation-delay:2s"></div>
+            <div class="element" style="top:20%; left:80%; animation-delay:3s"></div>
+            <div class="element" style="top:55%; left:35%; animation-delay:4s"></div>
+        </div>
+
+
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero-section text-center bg bg mt-5" id="dashboard">
+            <div class="container mt-5 ">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-7  text-white">
+                        <h1>Admin Dashboard</h1>
+                        <div class="mt-4 d-flex justify-content-center">
+                            <a href="#dashboard" class="btn btn-success me-2">
+                                <i class="bi bi-speedometer2 me-1"></i> Go to Dashboard
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img src="src/user-gear.png" alt="Frolic Admin Illustration"
+                            class="img-fluid rounded-3 shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="#dashboard" class="py-5">
+            <div class="container text-white">
+                <h2 class="section-title text-center">Admin Dashboard</h2>
+                <p class="mb-4 text-white text-center">
+                    Quick overview of major administration features and current system status.
+                </p>
+
+                <!-- ANALYSIS CARDS -->
+
+                <div class="container m-5">
+                    <div class="row g-3 mt-5">
+
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card ">
+                                <i class="bi bi-calendar-event fs-4 text-primary"></i>
+                                <p class="mt-2 mb-1 text-white">Total Events</p>
+                                <h3 class="fw-bold text-white">15</h3>
+                                <small class="text-success">+12% increase</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <i class="bi bi-people fs-4 text-info"></i>
+                                <p class="mt-2 mb-1 text-white">Total Registrations</p>
+                                <h3 class="fw-bold text-white">80</h3>
+                                <small class="text-success ">+23% growth</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <i class="bi bi-file-earmark-text fs-4 text-warning"></i>
+                                <p class="mt-2 mb-1 text-white">Active Forms</p>
+                                <h3 class="fw-bold text-white">12</h3>
+                                <small class="text-success">+5 new this week</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <i class="bi bi-graph-up-arrow fs-4 text-danger"></i>
+                                <p class="mt-2 mb-1 text-white">Conversion Rate</p>
+                                <h3 class="fw-bold text-white">68%</h3>
+                                <small class="text-success">+8% improved</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--  DASHBOARD CARDS-->
+
+                    <div class="row g-3 g-md-4">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5 ">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
+                                            <i class="bi bi-building fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Institutes &amp; Events</h5>
+                                            <small class="text-white">Structure &amp; master data</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Create and manage institutes, departments, and event catalog with schedules and
+                                        rules.
+                                    </p>
+                                    <a href="#dashboard" class=" btn btn-sm btn-outline-primary">Manage now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Manage Coordinators -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 me-3">
+                                            <i class="bi bi-people fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Event Coordinators</h5>
+                                            <small class="text-muted">Roles &amp; permissions</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Assign coordinators to events, define responsibilities, and control access
+                                        levels.
+                                    </p>
+                                    <a href="#coordinators" class="btn btn-sm btn-outline-success">View coordinators</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Approvals -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5 ">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle p-3 me-3">
+                                            <i class="bi bi-check2-circle fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Approvals &amp; Payments</h5>
+                                            <small class="text-muted">Groups &amp; participants</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Approve groups, participants, and registration payments with status tracking.
+                                    </p>
+                                    <a href="Payment.html" class="btn btn-sm btn-outline-warning">Review
+                                        queue</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Attendance -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5 ">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-info bg-opacity-10 text-info rounded-circle p-3 me-3">
+                                            <i class="bi bi-clipboard-check fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Attendance</h5>
+                                            <small class="text-muted">Event-day control</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Mark attendance for participants and teams during event sessions.
+                                    </p>
+                                    <button class="btn btn-sm btn-outline-info">
+                                        Mark attendance
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Winners -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5 ">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-danger bg-opacity-10 text-danger rounded-circle p-3 me-3">
+                                            <i class="bi bi-trophy fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Winners</h5>
+                                            <small class="text-muted">Results &amp; ranks</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Declare winners, assign ranks, and publish results in real time.
+                                    </p>
+                                    <a href="Result.html" class="btn btn-sm btn-outline-danger">Declare winners</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reports -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 mt-5 ">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-secondary bg-opacity-10 text-secondary rounded-circle p-3 me-3">
+                                            <i class="bi bi-graph-up-arrow fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-0">Reports</h5>
+                                            <small class="text-muted">Insights &amp; analytics</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text small">
+                                        Generate downloadable reports for registrations, participation, finances, and
+                                        winners.
+                                    </p>
+                                    <a href="#reports" class="btn btn-sm btn-outline-secondary">View reports</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- TABLE SECTION  -->
+        <section id="data-management" class="pb-5">
+            <div class="container">
+                <div class="mb-5 ">
+                    <!-- Institute Table -->
+                    <div id="institute" class="mb-5">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+                            <h3 class="section-title mb-0 text-white">Institutes</h3>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#addInstituteModal">
+                                <i class="bi bi-plus-lg me-1"></i>Add Institute
+                            </button>
+                        </div>
+
+                        <!-- Institute Modals -->
+                        <div class="modal fade" id="addInstituteModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Add New Institute</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <form id="instituteForm">
+                                        <div class="modal-body">
+                                            <input type="hidden" id="instituteId" name="id">
+                                            <div class="mb-3">
+                                                <label class="form-label">Institute Name</label>
+                                                <input type="text" class="form-control" id="instituteName" name="name"
+                                                    required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Location</label>
+                                                <input type="text" class="form-control" name="location" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Type</label>
+                                                <select class="form-select" name="type" required>
+                                                    <option value="">Select Type</option>
+                                                    <option value="University">University</option>
+                                                    <option value="Engineering">Engineering</option>
+                                                    <option value="Technology">Technology</option>
+                                                    <option value="College">College</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Status</label>
+                                                <select class="form-select" name="status" required>
+                                                    <option value="Active">Active</option>
+                                                    <option value="Inactive">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Save Institute</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Modals -->
+                        <div class="modal fade" id="addEventModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Create New Event</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <form id="eventForm">
+                                        <div class="modal-body">
+                                            <input type="hidden" id="eventId" name="id">
+                                            <div class="mb-3">
+                                                <label class="form-label">Event Name</label>
+                                                <input type="text" class="form-control" name="name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Category</label>
+                                                <select class="form-select" name="category" required>
+                                                    <option value="">Select Category</option>
+                                                    <option value="Technical">Technical</option>
+                                                    <option value="Cultural">Cultural</option>
+                                                    <option value="Sports">Sports</option>
+                                                    <option value="Workshop">Workshop</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Date</label>
+                                                <input type="date" class="form-control" name="date" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Mode</label>
+                                                <select class="form-select" name="mode" required>
+                                                    <option value="Offline">Offline</option>
+                                                    <option value="Online">Online</option>
+                                                    <option value="Hybrid">Hybrid</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Status</label>
+                                                <select class="form-select" name="status" required>
+                                                    <option value="Open">Open</option>
+                                                    <option value="Registrations Closed">Registrations Closed</option>
+                                                    <option value="Completed">Completed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Create Event</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Participation Approval Modal -->
+                        <div class="modal fade" id="approvalModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Approve Participation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="approvalMessage"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-success"
+                                            id="confirmApprove">Approve</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-body table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Location</th>
+                                            <th>Type</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="instituteTable">
+                                        <!-- Institute rows will be populated by JavaScript -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Darshan University</td>
+                                            <td>Rajkot</td>
+                                            <td>Engineering</td>
+                                            <td>Active</td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-outline-secondary">View</button>
+                                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Atmiya University</td>
+                                            <td>Rajkot</td>
+                                            <td>Arts</td>
+                                            <td>In Active</td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-outline-secondary">View</button>
+                                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Table -->
+                <div id="event" class="mb-5">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+                        <h3 class="section-title mb-0 text-white">Events</h3>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addEventModal">
+                            <i class="bi bi-plus-lg me-1"></i> Create Event
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Event Name</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Mode</th>
+                                        <th>Status</th>
+                                        <th class="text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Coding Hackathon</td>
+                                        <td>Technical</td>
+                                        <td>2026-02-05</td>
+                                        <td>Offline</td>
+                                        <td><span class="badge bg-success">Open</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Battle of Bands</td>
+                                        <td>Cultural</td>
+                                        <td>2026-02-06</td>
+                                        <td>Offline</td>
+                                        <td><span class="badge bg-warning text-dark">Registrations Closed</span>
+                                        </td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Participants & Payments Table -->
+                <div id="groups-participants" class="mb-3">
+                    <h3 class="section-title text-white">Groups &amp; Participants</h3>
+                </div>
+
+                <div id="participants-payments" class="card mb-3">
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Group / Participant</th>
+                                    <th>Event</th>
+                                    <th>Institute</th>
+                                    <th>Approval</th>
+                                    <th>Payment</th>
+                                    <th>Attendance</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Team Alpha (4)</td>
+                                    <td>Coding Hackathon</td>
+                                    <td>ABC College of Engineering</td>
+                                    <td>
+                                        <span class="badge bg-success">Approved</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success">Paid</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-secondary">Not Marked</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal"
+                                            data-bs-target="#attendanceModal">
+                                            Mark Attendance
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal"
+                                            data-bs-target="#winnerModal">
+                                            Declare Winner
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>John Doe</td>
+                                    <td>Talk Show</td>
+                                    <td>XYZ Institute of Technology</td>
+                                    <td>
+                                        <span class="badge bg-warning text-dark">Pending</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-danger">Unpaid</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-secondary">Not Marked</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                            data-bs-target="#approvalModal">
+                                            Approve
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <small class="text-white d-block mb-4">
+                    Use action buttons to View, Edit, Delete, Approve, Mark Attendance, or Declare Winner for
+                    records.
+                </small>
+
+            </div>
+        </section>
+
+        <!-- ================= COORDINATORS, WINNERS, REPORTS ================= -->
+        <section class="pb-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Coordinators -->
+                    <div class="col-12 col-lg-4" id="coordinators">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span>Event Coordinators</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#addCoordinatorModal">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group small">
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Jane Smith</strong>
+                                            <div class="text-muted">Coding Hackathon</div>
+                                        </div>
+                                        <span class="badge bg-success rounded-pill">Lead</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Rahul Verma</strong>
+                                            <div class="text-muted">Battle of Bands</div>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">Coordinator</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Ananya Iyer</strong>
+                                            <div class="text-muted">Gaming Tournament</div>
+                                        </div>
+                                        <span class="badge bg-warning text-dark rounded-pill">Pending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Winners -->
+                    <div class="col-12 col-lg-4" id="winners">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                Winners (Recent)
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-sm align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Event</th>
+                                            <th>Winner</th>
+                                            <th>Rank</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Coding Hackathon</td>
+                                            <td>Team Alpha</td>
+                                            <td><span class="badge bg-warning text-dark">1st</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Battle of Bands</td>
+                                            <td>RockStorm</td>
+                                            <td><span class="badge bg-secondary">2nd</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quiz Mania</td>
+                                            <td>Brainy Bunch</td>
+                                            <td><span class="badge bg-bronze bg-opacity-75 border">3rd</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-sm btn-outline-primary mt-3" data-bs-toggle="modal"
+                                    data-bs-target="#winnerModal">
+                                    Declare new winner
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reports -->
+                    <div class="col-12 col-lg-4" id="reports">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                Reports &amp; Analytics
+                            </div>
+                            <div class="card-body">
+                                <p class="small text-muted">
+                                    Generate summary reports for registrations, participation, collections, and
+                                    rankings.
+                                </p>
+                                <div class="mb-3">
+                                    <label for="reportType" class="form-label small">Report type</label>
+                                    <select class="form-select form-select-sm" id="reportType">
+                                        <option value="registrations">Registrations summary</option>
+                                        <option value="finance">Payments &amp; collections</option>
+                                        <option value="attendance">Attendance report</option>
+                                        <option value="winners">Winners summary</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reportRange" class="form-label small">Date range</label>
+                                    <input type="date" class="form-control form-control-sm mb-1" id="reportStart">
+                                    <input type="date" class="form-control form-control-sm" id="reportEnd">
+                                </div>
+                                <button class="btn btn-sm btn-primary w-100">
+                                    <i class="bi bi-file-earmark-arrow-down me-1"></i> Generate report
+                                </button>
+                                <!-- TODO: Integrate report generation API and file download -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Add Institute Modal -->
+        <div class="modal fade" id="addInstituteModal" tabindex="-1" aria-labelledby="addInstituteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="addInstituteForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addInstituteModalLabel">Add Institute</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="instituteName" class="form-label">Institute name</label>
+                                <input type="text" class="form-control" id="instituteName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instituteCode" class="form-label">Institute code</label>
+                                <input type="text" class="form-control" id="instituteCode" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instituteLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="instituteLocation" placeholder="City, State"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instituteType" class="form-label">Institute Type</label>
+                                <select id="instituteType" class="form-select" required>
+                                    <option value="">Select type</option>
+                                    <option value="University">University</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Arts">Arts</option>
+                                    <option value="Medical">Medical</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instituteStatus" class="form-label">Status</label>
+                                <select id="instituteStatus" class="form-select" required>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Save Institute</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Institute Modal -->
+        <div class="modal fade" id="viewInstituteModal" tabindex="-1" aria-labelledby="viewInstituteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="viewInstituteModalLabel">Institute Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Institute Name</label>
+                            <p id="viewInstituteName" class="form-control-plaintext"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Institute Code</label>
+                            <p id="viewInstituteCode" class="form-control-plaintext"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Location</label>
+                            <p id="viewInstituteLocation" class="form-control-plaintext"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Institute Type</label>
+                            <p id="viewInstituteType" class="form-control-plaintext"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Status</label>
+                            <p id="viewInstituteStatus" class="form-control-plaintext"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary btn-sm"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Institute Modal -->
+        <div class="modal fade" id="editInstituteModal" tabindex="-1" aria-labelledby="editInstituteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="editInstituteForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editInstituteModalLabel">Edit Institute</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="editInstituteId">
+                            <div class="mb-3">
+                                <label for="editInstituteName" class="form-label">Institute name</label>
+                                <input type="text" class="form-control" id="editInstituteName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editInstituteCode" class="form-label">Institute code</label>
+                                <input type="text" class="form-control" id="editInstituteCode" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editInstituteLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="editInstituteLocation"
+                                    placeholder="City, State" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editInstituteType" class="form-label">Institute Type</label>
+                                <select id="editInstituteType" class="form-select" required>
+                                    <option value="">Select type</option>
+                                    <option value="University">University</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Arts">Arts</option>
+                                    <option value="Medical">Medical</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editInstituteStatus" class="form-label">Status</label>
+                                <select id="editInstituteStatus" class="form-select" required>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Update Institute</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Department Modal -->
+        <div class="modal fade" id="addDepartmentModal" tabindex="-1" aria-labelledby="addDepartmentModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Connect department creation with backend API -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addDepartmentModalLabel">Add Department</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="departmentName" class="form-label">Department name</label>
+                                <input type="text" class="form-control" id="departmentName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="departmentInstitute" class="form-label">Institute</label>
+                                <select id="departmentInstitute" class="form-select" required>
+                                    <option selected disabled value="">Select institute</option>
+                                    <option>ABC College of Engineering</option>
+                                    <option>XYZ Institute of Technology</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="departmentCode" class="form-label">Department code</label>
+                                <input type="text" class="form-control" id="departmentCode" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="departmentStatus" class="form-label">Status</label>
+                                <select id="departmentStatus" class="form-select" required>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Save department</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Event Modal -->
+        <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Integrate event creation with events API & database -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addEventModalLabel">Create Event</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="eventName" class="form-label">Event name</label>
+                                    <input type="text" class="form-control" id="eventName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventCategory" class="form-label">Category</label>
+                                    <select id="eventCategory" class="form-select" required>
+                                        <option value="technical">Technical</option>
+                                        <option value="cultural">Cultural</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="eventDate" class="form-label">Event date</label>
+                                    <input type="date" class="form-control" id="eventDate" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="eventCoordinator" class="form-label">Event Coordinator</label>
+                                    <input type="text" class="form-control" id="eventCoordinator" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="eventMode" class="form-label">Mode</label>
+                                    <select id="eventMode" class="form-select" required>
+                                        <option value="offline">Offline</option>
+                                        <option value="online">Online</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="eventMaxParticipants" class="form-label">Max participants</label>
+                                    <input type="number" min="1" max="4" class="form-control" id="eventMaxParticipants"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="eventDescription" class="form-label">Description</label>
+                                    <textarea id="eventDescription" class="form-control" rows="3" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="eventRules" class="form-label">Rules / instructions</label>
+                                    <textarea id="eventRules" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Create event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Approval Modal -->
+        <div class="modal fade" id="approvalModal" tabindex="-1" aria-labelledby="approvalModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Call backend API for participant/group approval or rejection -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="approvalModalLabel">Approve Participant / Group</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="small mb-3">
+                                Please confirm the approval status and comments for the selected registration.
+                            </p>
+                            <div class="mb-3">
+                                <label class="form-label">Approval status</label>
+                                <select class="form-select" required>
+                                    <option value="approved">Approved</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Admin comments</label>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Optional notes for this decision"></textarea>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="" id="notifyParticipant">
+                                <label class="form-check-label" for="notifyParticipant">
+                                    Send notification email / SMS to participant
+                                </label>
+                            </div>
+                            <!-- TODO: Trigger notification service when checked -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Save decision</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Modal -->
+        <div class="modal fade" id="attendanceModal" tabindex="-1" aria-labelledby="attendanceModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Integrate attendance API to mark/check-in participants -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="attendanceModalLabel">Mark Attendance</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="small mb-3">
+                                Confirm the attendance status for selected participant / group.
+                            </p>
+                            <div class="mb-3">
+                                <label class="form-label">Attendance status</label>
+                                <select class="form-select" required>
+                                    <option value="present">Present</option>
+                                    <option value="absent">Absent</option>
+                                    <option value="late">Late</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Notes</label>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Optional remarks (e.g., late by 10 minutes)"></textarea>
+                            </div>
+                            <!-- TODO: Store attendance record in database -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Save attendance</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Declare Winner Modal -->
+        <div class="modal fade" id="winnerModal" tabindex="-1" aria-labelledby="winnerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Connect to winners API & update rankings, notify participants -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="winnerModalLabel">Declare Winner</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Event</label>
+                                <select class="form-select" required>
+                                    <option selected disabled value="">Select event</option>
+                                    <option>Coding Hackathon</option>
+                                    <option>Battle of Bands</option>
+                                    <option>Quiz Mania</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Winner group / participant</label>
+                                <select class="form-select" required>
+                                    <option selected disabled value="">Select winner</option>
+                                    <option>Team Alpha</option>
+                                    <option>RockStorm</option>
+                                    <option>Brainy Bunch</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Rank</label>
+                                <select class="form-select" required>
+                                    <option value="1">1st</option>
+                                    <option value="2">2nd</option>
+                                    <option value="3">3rd</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Remarks</label>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Optional remarks to display on certificate / results page"></textarea>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="autoGenerateCertificate">
+                                <label class="form-check-label" for="autoGenerateCertificate">
+                                    Auto-generate e-certificate
+                                </label>
+                            </div>
+                            <!-- TODO: Hook into certificate generation and mailing service -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success btn-sm">Confirm winner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Coordinator Modal -->
+        <div class="modal fade" id="addCoordinatorModal" tabindex="-1" aria-labelledby="addCoordinatorModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form>
+                        <!-- TODO: Save coordinator details & map to event via backend API -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addCoordinatorModalLabel">Add Coordinator</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="coordName">Full name</label>
+                                <input type="text" class="form-control" id="coordName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="coordEmail">Email</label>
+                                <input type="email" class="form-control" id="coordEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="coordPhone">Phone</label>
+                                <input type="tel" class="form-control" id="coordPhone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="coordEvent">Event</label>
+                                <select id="coordEvent" class="form-select" required>
+                                    <option selected disabled value="">Select event</option>
+                                    <option>Coding Hackathon</option>
+                                    <option>Battle of Bands</option>
+                                    <option>Quiz Mania</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="coordRole">Role</label>
+                                <select id="coordRole" class="form-select" required>
+                                    <option value="lead">Lead</option>
+                                    <option value="coordinator">Coordinator</option>
+                                    <option value="volunteer">Volunteer</option>
+                                </select>
+                            </div>
+                            <!-- TODO: Generate login credentials for coordinator if required -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Save coordinator</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER CONTENT-->
+
+
+    <footer class="p-4 bg ">
+        <div class="copyright-wrapper d-block mb-1 fs-8 text-center text-white">
+            <span>&copy; 2026. All Rights Reserved</span>
+        </div>
+        <div class="credit-wrapper d-block text-secondary fs-8 text-center">
+            <span class="text-white"> Thanks For Visit Site </span>
+            <span class="text-primary">&#9829;</span>
+        </div>
+
+    </footer>
+    <!-- ================= SCRIPTS ================= -->
+
+    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
