@@ -27,6 +27,7 @@ const instituteSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
     }
+
 });
 
 module.exports = mongoose.model('institutes', instituteSchema);
