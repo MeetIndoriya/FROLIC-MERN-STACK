@@ -8,6 +8,9 @@ app.use(express.json())
 app.use(cors());
 app.use(express.static('public'));
 
+
+
+
 mongoose.connect('mongodb://localhost:27017/WT_Project')
     .then(() => console.log('Database Connected!'))
     .catch(err => console.log(err));
@@ -38,4 +41,6 @@ app.put('/events/:id', async (req, res) => {
     res.json(data);
 });
 
-app.listen(3000, () => console.log('Server is running on 3000'));
+app.listen(3000, () => {
+    console.log('Server is running on 3000')
+});
