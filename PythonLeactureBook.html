@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lists Notebook Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5e6d0 0%, #e6d3b8 100%);
+            font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .desk {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 1067px;
+            /* 3:4 aspect ratio */
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23d4b98c"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23c9a872" stroke-width="0.5"/></svg>');
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .notebook-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .spiral-binding {
+            width: 30px;
+            height: 100%;
+            background: linear-gradient(to right, #a0a0a0, #d0d0d0, #a0a0a0);
+            border-radius: 5px 0 0 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .spiral-hole {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .notebook-page {
+            flex: 1;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f4ff"/><path d="M0,0 L100,0 L100,1 L0,1 Z M0,5 L100,5 L100,6 L0,6 Z M0,10 L100,10 L100,11 L0,11 Z M0,15 L100,15 L100,16 L0,16 Z M0,20 L100,20 L100,21 L0,21 Z M0,25 L100,25 L100,26 L0,26 Z M0,30 L100,30 L100,31 L0,31 Z M0,35 L100,35 L100,36 L0,36 Z M0,40 L100,40 L100,41 L0,41 Z M0,45 L100,45 L100,46 L0,46 Z M0,50 L100,50 L100,51 L0,51 Z M0,55 L100,55 L100,56 L0,56 Z M0,60 L100,60 L100,61 L0,61 Z M0,65 L100,65 L100,66 L0,66 Z M0,70 L100,70 L100,71 L0,71 Z M0,75 L100,75 L100,76 L0,76 Z M0,80 L100,80 L100,81 L0,81 Z M0,85 L100,85 L100,86 L0,86 Z M0,90 L100,90 L100,91 L0,91 Z M0,95 L100,95 L100,96 L0,96 Z" fill="%23e0d0f0" opacity="0.3"/></svg>');
+            border-radius: 0 8px 8px 0;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: rgba(100, 100, 100, 0.5);
+            font-weight: bold;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            color: #2e5d3f;
+            margin: 0 0 30px 0;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', cursive;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+            padding: 5px 10px;
+            background: linear-gradient(to right, #fff9c4 0%, #fff59d 100%);
+            display: inline-block;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .bullet-list {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .bullet-list li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .checkmark {
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .code-block {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid #aaa;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e8f5e9;
+            font-weight: bold;
+        }
+
+        .mascot {
+            position: absolute;
+            bottom: 60px;
+            right: 40px;
+            width: 80px;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="40" r="30" fill="%234CAF50"/><circle cx="35" cy="30" r="5" fill="white"/><circle cx="65" cy="30" r="5" fill="white"/><circle cx="35" cy="30" r="2" fill="black"/><circle cx="65" cy="30" r="2" fill="black"/><path d="M30,55 Q50,70 70,55" stroke="white" stroke-width="3" fill="none"/><rect x="20" y="70" width="60" height="20" rx="5" fill="%23FF9800"/><text x="50" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="white">LIST</text></svg>') no-repeat center;
+            background-size: contain;
+        }
+
+        .keyboard {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 100px;
+            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .keyboard-keys {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            gap: 3px;
+            padding: 10px;
+            height: 80px;
+        }
+
+        .key {
+            background: #555;
+            border-radius: 3px;
+            border: 1px solid #444;
+        }
+
+        .pen-container {
+            position: absolute;
+            right: -40px;
+            top: 100px;
+            width: 30px;
+        }
+
+        .pen {
+            width: 20px;
+            height: 80px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 5px;
+        }
+
+        .pen-blue {
+            background: #2196F3;
+        }
+
+        .pen-black {
+            background: #212121;
+        }
+
+        .pen-gold {
+            background: #FFD700;
+        }
+
+        .plant {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 60px;
+            height: 80px;
+        }
+
+        .pot {
+            width: 30px;
+            height: 20px;
+            background: #795548;
+            border-radius: 3px 3px 0 0;
+            margin: 0 auto;
+        }
+
+        .leaves {
+            width: 50px;
+            height: 50px;
+            background: #4CAF50;
+            border-radius: 50% 50% 0 50%;
+            margin: -10px auto 0;
+            transform: rotate(20deg);
+        }
+
+        .eraser {
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            width: 30px;
+            height: 30px;
+            background: #F44336;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-table {
+            position: absolute;
+            bottom: 60px;
+            right: 150px;
+            width: 200px;
+        }
+
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            margin: 10px 0;
+            color: #2196F3;
+        }
+
+        .concept-box {
+            display: inline-block;
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 5px;
+            font-size: 14px;
+            border: 1px solid #90caf9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="desk">
+        <!-- Desk items -->
+        <div class="keyboard">
+            <div class="keyboard-keys">
+                <!-- Simplified keyboard representation -->
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+            </div>
+        </div>
+
+        <div class="pen-container">
+            <div class="pen pen-blue"></div>
+            <div class="pen pen-black"></div>
+            <div class="pen pen-gold"></div>
+        </div>
+
+        <div class="plant">
+            <div class="pot"></div>
+            <div class="leaves"></div>
+        </div>
+
+        <div class="eraser"></div>
+
+        <!-- Notebook -->
+        <div class="notebook-container">
+            <div class="spiral-binding">
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+                <div class="spiral-hole"></div>
+            </div>
+
+            <div class="notebook-page">
+                <div class="page-number">3</div>
+                <div class="watermark">@Mastercode.sagar</div>
+
+                <h1 class="title">&lt; Python Lists &gt;</h1>
+
+                <h2 class="section-title">What is List?</h2>
+                <ul class="bullet-list">
+                    <li><span class="checkmark">✓</span>Ordered collection of items that can be of different data types
+                    </li>
+                    <li><span class="checkmark">✓</span>Mutable - elements can be changed after creation</li>
+                    <li><span class="checkmark">✓</span>Indexed using integers starting from 0</li>
+                </ul>
+
+                <h2 class="section-title">Why Use Lists?</h2>
+                <ul class="bullet-list">
+                    <li><span class="checkmark">✓</span>Store multiple values in a single variable</li>
+                    <li><span class="checkmark">✓</span>Dynamic size - can grow/shrink as needed</li>
+                    <li><span class="checkmark">✓</span>Support various operations like append, remove, sort</li>
+                    <li><span class="checkmark">✓</span>Allow duplicate values and nested structures</li>
+                </ul>
+
+                <h2 class="section-title">Comparison Table: List vs Tuple</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>List</th>
+                                <th>Tuple</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mutability</td>
+                                <td>Mutable</td>
+                                <td>Immutable</td>
+                            </tr>
+                            <tr>
+                                <td>Syntax</td>
+                                <td>[ ]</td>
+                                <td>( )</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td>Slower</td>
+                                <td>Faster</td>
+                            </tr>
+                            <tr>
+                                <td>Methods</td>
+                                <td>Many methods</td>
+                                <td>Fewer methods</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="section-title">Applications:</h2>
+                <ul class="bullet-list">
+                    <li><span class="checkmark">✓</span>Data storage and manipulation in applications</li>
+                    <li><span class="checkmark">✓</span>Implementing stacks and queues</li>
+                    <li><span class="checkmark">✓</span>Processing sequences of data (numbers, strings)</li>
+                </ul>
+
+                <h2 class="section-title">Code Example:</h2>
+                <div class="code-block">
+                    l1 = [1, 2, 3, 4, 5]<br>
+                    print(l1)<br>
+                    print(type(l1))<br>
+                    l2 = [10, 2.5, True, 6+9j, "Hello"]<br>
+                    print(len(l2))<br>
+                    for i in l2:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+                </div>
+                <div class="arrow">→</div>
+                <div class="code-block">
+                    [1, 2, 3, 4, 5]<br>
+                    &lt;class 'list'&gt;<br>
+                    5<br>
+                    10<br>
+                    2.5<br>
+                    True<br>
+                    (6+9j)<br>
+                    Hello
+                </div>
+
+                <h2 class="section-title">Key List Operations:</h2>
+                <div class="concept-box">append()</div>
+                <div class="concept-box">extend()</div>
+                <div class="concept-box">insert()</div>
+                <div class="concept-box">pop()</div>
+                <div class="concept-box">remove()</div>
+                <div class="concept-box">sort()</div>
+                <div class="concept-box">reverse()</div>
+                <div class="concept-box">List Comprehension</div>
+
+                <div class="summary-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">List Methods Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>append()</td>
+                                <td>Add item</td>
+                            </tr>
+                            <tr>
+                                <td>remove()</td>
+                                <td>Delete item</td>
+                            </tr>
+                            <tr>
+                                <td>sort()</td>
+                                <td>Order items</td>
+                            </tr>
+                            <tr>
+                                <td>index()</td>
+                                <td>Find position</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mascot"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

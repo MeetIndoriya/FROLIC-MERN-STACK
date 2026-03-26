@@ -8,7 +8,6 @@ app.use(express.json())
 app.use(cors());
 app.use(express.static('public'));
 
-
 mongoose.connect('mongodb://localhost:27017/WT_Project')
     .then(() => console.log('Database Connected!'))
     .catch(err => console.log(err));
